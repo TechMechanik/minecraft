@@ -8,7 +8,6 @@
   <style>
     :root { --sidebar-width: 320px; }
     .markdown-section { max-width: 980px; }
-    code, pre { font-size: 0.95em; }
   </style>
 </head>
 <body>
@@ -16,14 +15,14 @@
   <script>
     window.$docsify = {
       name: 'ATM10 Modular Base',
-      repo: '',
       loadSidebar: true,
       loadNavbar: true,
       subMaxLevel: 3,
       auto2top: true,
       relativePath: true,
-      search: 'auto',
-      homepage: '00-overview.md'
+      homepage: '00-overview.md',
+      // IMPORTANT for project pages like /minecraft/
+      basePath: '/minecraft/'
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>

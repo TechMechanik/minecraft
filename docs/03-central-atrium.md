@@ -26,3 +26,10 @@
 #####=====#####
 #####=====#####
 ```
+
+
+## Top-down master plan
+
+<p align="center">
+  <img src="assets/diagrams/master-plan.png" alt="ATM10 Modular Base master plan" width="900" />
+</p>

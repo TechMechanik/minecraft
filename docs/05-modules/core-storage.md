@@ -23,3 +23,10 @@
 # S S S S S S S #
 #################
 ```
+
+
+## Top-down zoning diagram
+
+<p align="center">
+  <img src="assets/diagrams/module-core-storage.png" alt="core-storage module zoning" width="900" />
+</p>

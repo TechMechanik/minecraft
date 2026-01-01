@@ -1,32 +1,290 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ATM10 Modular Base</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <style>
-    :root { --sidebar-width: 320px; }
-    .markdown-section { max-width: 980px; }
-    code, pre { font-size: 0.95em; }
-  </style>
+<title>ATM10 Modular Base</title>
 </head>
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: 'ATM10 Modular Base',
-      repo: '',
-      loadSidebar: true,
-      loadNavbar: true,
-      subMaxLevel: 3,
-      auto2top: true,
-      relativePath: true,
-      search: 'auto',
-      homepage: '00-overview.md'
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+<section id="00-overview">
+<h1>Overview</h1>
+<p>This base design is intended for long-term ATM10 worlds.</p>
+<h2>Design Pillars</h2>
+<ul>
+<li>Modular: nothing blocks expansion</li>
+<li>Deterministic: no guesswork mid-build</li>
+<li>Chunk-safe: prevents desyncs and unload bugs</li>
+<li>Discipline-separated: tech, magic, farming isolated</li>
+<li>Vertical-first: scales upward and downward</li>
+</ul>
+<p>The <strong>central atrium</strong> is the only global structure.</p>
+<p>Everything else plugs into it.</p>
+</section>
+<section id="01-global-standards">
+<h1>Global Standards</h1>
+<h2>Module Dimensions</h2>
+<ul>
+<li>Footprint: 17×17</li>
+<li>Interior height: 6</li>
+<li>Structural height per level: 8</li>
+</ul>
+<h2>Vertical Levels</h2>
+<p>Floors repeat every 8 blocks:</p>
+<ul>
+<li>Ground: Y = 0</li>
+<li>Upper floors: +8, +16, +24</li>
+<li>Basements: -8, -16</li>
+</ul>
+<h2>Tunnel Standard</h2>
+<ul>
+<li>Size: 5×5</li>
+<li>Flat ceiling for cables</li>
+</ul>
+</section>
+<section id="02-chunk-alignment-and-loaders">
+<h1>Chunk Alignment & Loaders</h1>
+<h2>Alignment Rules</h2>
+<ul>
+<li>Build with F3+G on</li>
+<li>Atrium shaft centered in a chunk</li>
+<li>Module interiors mostly within one chunk</li>
+<li>Structural borders may overlap</li>
+</ul>
+<h2>Loader Strategy</h2>
+<h3>Primary Loader</h3>
+<ul>
+<li>Exactly one</li>
+<li>Atrium center, Y=1</li>
+<li>Loads entire base vertically</li>
+</ul>
+<h3>Secondary Loaders</h3>
+<p>Use only for:</p>
+<ul>
+<li>Farms</li>
+<li>Mob systems</li>
+<li>Extreme automation</li>
+</ul>
+<p>Rules:</p>
+<ul>
+<li>One per vertical stack</li>
+<li>Centered</li>
+<li>Never on edges</li>
+</ul>
+</section>
+<section id="03-central-atrium">
+<h1>Central Atrium</h1>
+<h2>Purpose</h2>
+<ul>
+<li>Visual anchor</li>
+<li>Vertical routing spine</li>
+<li>Navigation hub</li>
+</ul>
+<h2>Dimensions</h2>
+<ul>
+<li>Footprint: 21×21</li>
+<li>Shaft: 5×5 (open)</li>
+</ul>
+<h2>Materials</h2>
+<ul>
+<li>Floor: Polished Andesite</li>
+<li>Ring: Brass Casing</li>
+<li>Walls: Polished Tuff Bricks</li>
+<li>Pillars: Andesite Pillars</li>
+<li>Windows: Framed Glass</li>
+</ul>
+<h2>ASCII Plan</h2>
+<pre>
+#####=====#####
+#####=====#####
+==           ==
+==   SHAFT   ==
+==           ==
+#####=====#####
+#####=====#####
+</pre>
+</section>
+<section id="04-tunnels-and-transport">
+<h1>Tunnels & Transport</h1>
+<h2>Tunnel Cross-Section</h2>
+<pre>
+#####
+#   #
+#   #
+#   #
+#####
+</pre>
+<h2>Materials</h2>
+<ul>
+<li>Floor: Andesite Casing</li>
+<li>Walls: Polished Tuff</li>
+<li>Ceiling: Dark Oak Slabs</li>
+<li>Corners: Brass Casing</li>
+</ul>
+<h2>Vertical Transport</h2>
+<ul>
+<li>5×5 shafts</li>
+<li>Elevator mods / rope pulleys / stairs</li>
+</ul>
+</section>
+<section id="06-vertical-expansion">
+<h1>Vertical Expansion</h1>
+<h2>Rules</h2>
+<ul>
+<li>Stack modules directly</li>
+<li>Same footprint</li>
+<li>Same tunnels</li>
+</ul>
+<h2>ASCII Vertical Stack</h2>
+<pre>
+[ Roof ]
+[ Floor ]
+[ Module ]
+[ Floor ]
+[ Module ]
+</pre>
+</section>
+<section id="07-basement-expansion">
+<h1>Basement Expansion</h1>
+<h2>Philosophy</h2>
+<ul>
+<li>Ugly systems go down</li>
+<li>Performance over looks</li>
+</ul>
+<h2>Basement Types</h2>
+<ol>
+<li>Utilities</li>
+<li>Heavy machinery</li>
+<li>Dark rituals</li>
+</ol>
+<h2>Access</h2>
+<ul>
+<li>Atrium shaft only</li>
+</ul>
+</section>
+<section id="08-block-counts">
+<h1>Block Counts</h1>
+<h2>Shared (Per Module)</h2>
+<ul>
+<li>Foundation: 289</li>
+<li>Pillars: 28</li>
+<li>Roof slabs: 136</li>
+<li>Glass: 160</li>
+</ul>
+<h2>Use Litematica</h2>
+<p>Counts assume no interior machines.</p>
+</section>
+<section id="09-build-order">
+<h1>Build Order</h1>
+<ol>
+<li>Enable chunk borders</li>
+<li>Place atrium + shaft</li>
+<li>Add primary loader</li>
+<li>Build ground modules</li>
+<li>Add basements</li>
+<li>Add upper floors</li>
+<li>Add transport</li>
+</ol>
+</section>
+<section id="core-storage">
+<h1>Core / Storage Module</h1>
+<h2>Purpose</h2>
+<ul>
+<li>Crafting hub</li>
+<li>Storage access</li>
+</ul>
+<h2>Materials</h2>
+<ul>
+<li>Floor: Factory Floor (Dark)</li>
+<li>Walls: Reinforced Stone Bricks</li>
+<li>Pillars: Andesite</li>
+</ul>
+<h2>Layout Notes</h2>
+<ul>
+<li>Storage walls on perimeter</li>
+<li>Central crafting island</li>
+</ul>
+<h2>ASCII Top-Down</h2>
+<pre>
+#################
+# S S S S S S S #
+# S           S #
+# S     C     S #
+# S           S #
+# S S S S S S S #
+#################
+</pre>
+</section>
+<section id="farm-nature">
+<h1>Farm / Nature Module</h1>
+<h2>Purpose</h2>
+<ul>
+<li>Crops</li>
+<li>Trees</li>
+<li>Bees</li>
+</ul>
+<h2>Materials</h2>
+<ul>
+<li>Floor: Livingwood</li>
+<li>Walls: Livingrock + Leaves</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>Roof always glass</li>
+<li>Vertical stacking preferred</li>
+</ul>
+</section>
+<section id="magic">
+<h1>Magic Module</h1>
+<h2>Purpose</h2>
+<ul>
+<li>Ars Nouveau</li>
+<li>Occultism</li>
+</ul>
+<h2>Materials</h2>
+<ul>
+<li>Floor: Arcane Stone</li>
+<li>Rune Ring: Source Gem</li>
+<li>Walls: Arcane Stone Bricks + Runed Livingrock</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>Rituals belong in basement</li>
+<li>Automation upstairs</li>
+</ul>
+</section>
+<section id="power">
+<h1>Power Module</h1>
+<h2>Purpose</h2>
+<ul>
+<li>Power generation</li>
+<li>Buffers</li>
+</ul>
+<h2>Materials</h2>
+<ul>
+<li>Floor: Hazard Factory Floor</li>
+<li>Walls: Copper Casing</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>Basement recommended for generators</li>
+<li>Ground floor for access</li>
+</ul>
+</section>
+<section id="tech-machines">
+<h1>Tech / Machines Module</h1>
+<h2>Purpose</h2>
+<ul>
+<li>Automation</li>
+<li>Processing lines</li>
+</ul>
+<h2>Materials</h2>
+<ul>
+<li>Floor: Steel Casing</li>
+<li>Walls: Structural Glass</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>Machines face inward</li>
+<li>All IO routed to atrium shaft</li>
+</ul>
+</section>
 </body>
 </html>

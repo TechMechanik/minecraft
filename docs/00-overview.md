@@ -1,16 +1,13 @@
-# Project Overview
+# Overview
 
-This project defines a **long-term, scalable base architecture** for ATM10.
+This base design is intended for long-term ATM10 worlds.
 
-## Core Goals
-- Eliminate redesigns
-- Prevent cable spaghetti
-- Separate tech, magic, and farming visually and mechanically
-- Allow infinite horizontal and vertical expansion
-- Stay chunk-safe at all times
+## Design Pillars
+- Modular: nothing blocks expansion
+- Deterministic: no guesswork mid-build
+- Chunk-safe: prevents desyncs and unload bugs
+- Discipline-separated: tech, magic, farming isolated
+- Vertical-first: scales upward and downward
 
-## Design Philosophy
-- Everything is modular
-- Nothing is temporary
-- The atrium is the heart of the base
-- Ugly systems go underground
+The **central atrium** is the only global structure.
+Everything else plugs into it.

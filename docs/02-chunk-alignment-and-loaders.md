@@ -1,25 +1,25 @@
 # Chunk Alignment & Loaders
 
-## Chunk Alignment Rules
-- Always build with F3+G enabled
-- Atrium center must be centered in a chunk
-- Module interiors should mostly sit within a single chunk
-- Structural borders may overlap adjacent chunks
+## Alignment Rules
+- Build with F3+G on
+- Atrium shaft centered in a chunk
+- Module interiors mostly within one chunk
+- Structural borders may overlap
 
-## Chunk Loaders
+## Loader Strategy
 
-### Primary Loader (Required)
-- Exactly one loader
-- Placed at atrium center at Y=1
-- Loads entire base vertically and horizontally
+### Primary Loader
+- Exactly one
+- Atrium center, Y=1
+- Loads entire base vertically
 
-### Secondary Loaders (Optional)
+### Secondary Loaders
 Use only for:
 - Farms
 - Mob systems
-- High-tick automation
+- Extreme automation
 
 Rules:
 - One per vertical stack
-- Centered in module
-- Never placed at edges
+- Centered
+- Never on edges

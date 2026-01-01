@@ -1,13 +1,15 @@
-# ATM10 Modular Base Design
+# ATM10 Modular Base – Complete Specification
 
-A complete, modular, chunk-safe base design for **All The Mods 10**.
+This repository contains a **fully realized, build-ready base design** for **All The Mods 10**.
 
-This repository contains **fully specified build documentation** for a long-term base supporting:
-- Tech mods
-- Magic mods
-- Vertical & basement expansion
-- Clean aesthetics in forest and water biomes
+It includes:
+- Global build standards
+- Chunk-safe alignment rules
+- Central atrium design
+- Horizontal, vertical, and basement expansion
+- Module-specific materials and layouts
+- ASCII diagrams
+- Litematica planning notes
+- Step-by-step build order
 
-Start here:
-- docs/00-overview.md
-- docs/09-build-order.md
+This is intended to be followed mechanically, not creatively.

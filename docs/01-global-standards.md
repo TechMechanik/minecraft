@@ -1,16 +1,16 @@
-# Global Build Standards
+# Global Standards
 
-## Module Footprint
-- Size: 17×17 blocks
-- Interior clear height: 6 blocks
-- Structural height per level: 8 blocks
+## Module Dimensions
+- Footprint: 17×17
+- Interior height: 6
+- Structural height per level: 8
 
 ## Vertical Levels
-- Ground floor starts at Y = 0
-- Floors repeat every 8 blocks:
-  - 0, 8, 16, 24, ...
-- Basements mirror the same spacing downward
+Floors repeat every 8 blocks:
+- Ground: Y = 0
+- Upper floors: +8, +16, +24
+- Basements: -8, -16
 
 ## Tunnel Standard
-- Size: 5×5 blocks
-- Flat ceiling for pipes and cables
+- Size: 5×5
+- Flat ceiling for cables

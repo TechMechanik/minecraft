@@ -2,13 +2,12 @@
 
 ## Purpose
 - Power generation
-- Energy buffering
+- Buffers
 
 ## Materials
 - Floor: Hazard Factory Floor
 - Walls: Copper Casing
-- Accents: Treated Wood
 
-## Expansion
-- Basement for large generators
-- Upper floor for batteries
+## Notes
+- Basement recommended for generators
+- Ground floor for access

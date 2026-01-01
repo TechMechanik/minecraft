@@ -11,3 +11,10 @@ This base design is intended for long-term ATM10 worlds.
 
 The **central atrium** is the only global structure.
 Everything else plugs into it.
+
+
+## Top-down master plan
+
+<p align="center">
+  <img src="assets/diagrams/master-plan.png" alt="ATM10 Modular Base master plan" width="900" />
+</p>

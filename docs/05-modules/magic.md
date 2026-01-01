@@ -12,3 +12,10 @@
 ## Notes
 - Rituals belong in basement
 - Automation upstairs
+
+
+## Top-down zoning diagram
+
+<p align="center">
+  <img src="assets/diagrams/module-magic.png" alt="magic module zoning" width="900" />
+</p>

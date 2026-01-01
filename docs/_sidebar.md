@@ -21,4 +21,4 @@
 
 - **Reference**
   - [Block Counts](08-block-counts.md)
-  - [Diagrams](diagrams/README.md)
+  - [Diagrams](10-diagrams.md)

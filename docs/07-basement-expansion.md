@@ -1,14 +1,13 @@
 # Basement Expansion
 
 ## Philosophy
-- Heavy or ugly systems go underground
-- Utility first, aesthetics second
+- Ugly systems go down
+- Performance over looks
 
 ## Basement Types
-- Utilities (cables, fluids)
-- Heavy machinery
-- Dark magic / rituals
+1. Utilities
+2. Heavy machinery
+3. Dark rituals
 
 ## Access
 - Atrium shaft only
-- No horizontal basement tunnels

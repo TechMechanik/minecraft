@@ -1,15 +1,25 @@
 # Core / Storage Module
 
 ## Purpose
-- Crafting
-- Logistics
-- Storage systems
+- Crafting hub
+- Storage access
 
 ## Materials
-- Floor: Create Factory Floor (Dark)
+- Floor: Factory Floor (Dark)
 - Walls: Reinforced Stone Bricks
-- Pillars: Andesite Pillars
+- Pillars: Andesite
 
-## Expansion
-- Second floor recommended for AE2 / RS
-- Basement recommended for utility routing
+## Layout Notes
+- Storage walls on perimeter
+- Central crafting island
+
+## ASCII Top-Down
+```
+#################
+# S S S S S S S #
+# S           S #
+# S     C     S #
+# S           S #
+# S S S S S S S #
+#################
+```

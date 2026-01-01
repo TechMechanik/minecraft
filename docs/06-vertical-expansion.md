@@ -1,11 +1,15 @@
 # Vertical Expansion
 
 ## Rules
-- Modules stack directly above themselves
+- Stack modules directly
 - Same footprint
-- Same tunnel alignment
-- No horizontal offsets
+- Same tunnels
 
-## Recommended Usage
-- Ground: access-heavy systems
-- Upper floors: automation and buffers
+## ASCII Vertical Stack
+```
+[ Roof ]
+[ Floor ]
+[ Module ]
+[ Floor ]
+[ Module ]
+```

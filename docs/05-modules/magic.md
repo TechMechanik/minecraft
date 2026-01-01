@@ -3,15 +3,12 @@
 ## Purpose
 - Ars Nouveau
 - Occultism
-- Ritual systems
 
 ## Materials
 - Floor: Arcane Stone
-- Rune Ring: Source Gem Blocks
-- Walls: Arcane Stone Bricks and Runed Livingrock
-- Pillars: Carved Deepslate
-- Windows: Mana Glass or Scrying Glass
+- Rune Ring: Source Gem
+- Walls: Arcane Stone Bricks + Runed Livingrock
 
-## Expansion
-- Basement for dark rituals
-- Upper floors for automation
+## Notes
+- Rituals belong in basement
+- Automation upstairs

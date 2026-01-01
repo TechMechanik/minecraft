@@ -6,9 +6,9 @@
 - Bees
 
 ## Materials
-- Floor: Livingwood Planks
-- Walls: Livingrock Bricks and Leaves
-- Ceiling: Glass or leaf lattice
+- Floor: Livingwood
+- Walls: Livingrock + Leaves
 
-## Expansion
-- Upper floors for trees or bees
+## Notes
+- Roof always glass
+- Vertical stacking preferred

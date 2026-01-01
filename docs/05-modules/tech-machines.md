@@ -2,12 +2,12 @@
 
 ## Purpose
 - Automation
-- Processing
+- Processing lines
 
 ## Materials
-- Floor: Mekanism Steel Casing
+- Floor: Steel Casing
 - Walls: Structural Glass
-- Pillars: Quartz Iron
 
-## Expansion
-- Upper floors for advanced processing
+## Notes
+- Machines face inward
+- All IO routed to atrium shaft

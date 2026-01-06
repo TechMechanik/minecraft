@@ -1,0 +1,346 @@
+/* Calculator Page Styles */
+
+.calculator-hero {
+    background: linear-gradient(135deg, var(--dark-bg), var(--darker-bg));
+    padding: 4rem 0 3rem;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.calculator-content {
+    padding: 3rem 0;
+}
+
+.calc-section {
+    margin: 3rem 0;
+    scroll-margin-top: 100px;
+}
+
+.calc-section h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.section-description {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Module Selection */
+.module-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.module-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.module-checkbox:not(.disabled):hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.module-checkbox.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.module-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    flex-shrink: 0;
+    position: relative;
+    transition: var(--transition);
+}
+
+.module-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.module-checkbox input[type="checkbox"]:checked ~ .checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--dark-bg);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.checkbox-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-label strong {
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+}
+
+.checkbox-label small {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Totals Summary */
+.totals-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.total-card {
+    background: linear-gradient(135deg, var(--card-bg), var(--darker-bg));
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.total-label {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.total-value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+/* Materials Breakdown */
+.materials-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.material-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.material-item:hover {
+    border-color: var(--primary-color);
+}
+
+.material-name {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.material-amount {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+}
+
+.material-category-header {
+    grid-column: 1 / -1;
+    color: var(--accent-color);
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Progress Tracker */
+.progress-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.progress-module h3 {
+    font-family: var(--font-display);
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.progress-phases {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.progress-phase {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.progress-phase:hover {
+    border-color: var(--primary-color);
+}
+
+.progress-phase input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.progress-phase span {
+    flex-grow: 1;
+    color: var(--text-light);
+}
+
+.progress-phase small {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.progress-phase input[type="checkbox"]:checked ~ span {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    margin-top: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: var(--darker-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+
+.progress-text {
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-family: var(--font-display);
+}
+
+/* Export Buttons */
+.export-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.export-btn {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.export-btn:hover {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--card-bg), var(--dark-bg));
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+}
+
+#reset-all {
+    border-color: var(--secondary-color);
+}
+
+#reset-all:hover {
+    border-color: var(--secondary-color);
+    background: rgba(255, 0, 110, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .totals-summary,
+    .export-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .materials-breakdown {
+        grid-template-columns: 1fr;
+    }
+    
+    .material-category-header {
+        grid-column: 1;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .calculator-hero,
+    .export-buttons,
+    .footer {
+        display: none;
+    }
+    
+    .progress-phase {
+        page-break-inside: avoid;
+    }
+}

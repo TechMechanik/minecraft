@@ -1,0 +1,375 @@
+/* Module Page Specific Styles */
+
+.module-hero {
+    background: linear-gradient(135deg, var(--dark-bg), var(--darker-bg));
+    padding: 6rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+}
+
+.central-hub-hero {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.breadcrumb {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.module-title {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.module-intro {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.module-specs {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.spec-value {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Quick Navigation */
+.quick-nav {
+    position: sticky;
+    top: 80px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 100;
+}
+
+.quick-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.quick-nav a:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+/* Content Sections */
+.module-content {
+    padding: 2rem 0 4rem;
+}
+
+.content-section {
+    margin: 4rem 0;
+    scroll-margin-top: 100px;
+}
+
+.content-section h2 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.content-section h3 {
+    font-family: var(--font-display);
+    color: var(--text-light);
+    margin: 1.5rem 0 1rem;
+}
+
+.content-section h4 {
+    color: var(--primary-color);
+    margin: 1rem 0 0.5rem;
+}
+
+.content-section p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.content-section ul {
+    color: var(--text-muted);
+    margin-left: 2rem;
+    line-height: 1.8;
+}
+
+.content-section li {
+    margin: 0.5rem 0;
+}
+
+.section-note {
+    background: rgba(0, 212, 255, 0.1);
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.section-note a {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.feature-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.feature-box ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.feature-box li::before {
+    content: '▸ ';
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Floor Details */
+.floor-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.floor-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.floor-header {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 212, 255, 0.05));
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.floor-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.floor-content {
+    padding: 2rem;
+}
+
+.materials-box {
+    background: rgba(255, 190, 11, 0.1);
+    border-left: 4px solid var(--accent-color);
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.materials-box strong {
+    color: var(--accent-color);
+}
+
+/* Materials Grid */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.material-category {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.material-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.materials-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.materials-table tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.materials-table tr:last-child {
+    border-bottom: none;
+}
+
+.materials-table td {
+    padding: 0.75rem 0.5rem;
+    color: var(--text-muted);
+}
+
+.materials-table td:first-child {
+    color: var(--text-light);
+}
+
+.materials-table td:last-child {
+    text-align: right;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Building Phases */
+.building-phases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.phase-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+}
+
+.phase-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+}
+
+.phase-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.phase-card ol {
+    margin-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+.phase-card li {
+    margin: 0.75rem 0;
+    line-height: 1.6;
+}
+
+/* 3D Viewer */
+.viewer-container {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    min-height: 600px;
+    margin-top: 2rem;
+}
+
+#viewer3d {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .module-title {
+        font-size: 2.5rem;
+    }
+    
+    .module-specs {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .quick-nav {
+        position: relative;
+        top: 0;
+    }
+    
+    .feature-grid,
+    .materials-grid,
+    .building-phases {
+        grid-template-columns: 1fr;
+    }
+}

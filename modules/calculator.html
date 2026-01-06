@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Calculator - ATM10 Base Guide</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/calculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚙</span>
+                <span class="logo-text">Techmechanik</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="central-hub.html">Central Hub</a></li>
+                <li><a href="power-generation.html">Power Gen</a></li>
+                <li><a href="processing.html">Processing</a></li>
+                <li><a href="storage.html">Storage</a></li>
+                <li><a href="calculator.html" class="active">Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="calculator-hero">
+        <div class="container">
+            <h1 class="module-title">Material Calculator</h1>
+            <p class="module-intro">Calculate exact material requirements and track your building progress</p>
+        </div>
+    </div>
+
+    <div class="container calculator-content">
+        <!-- Module Selection -->
+        <section class="calc-section">
+            <h2>Select Modules to Build</h2>
+            <div class="module-selection">
+                <label class="module-checkbox">
+                    <input type="checkbox" id="central-hub" checked>
+                    <span class="checkmark"></span>
+                    <div class="checkbox-label">
+                        <strong>Central Hub</strong>
+                        <small>32×32×19 blocks</small>
+                    </div>
+                </label>
+
+                <label class="module-checkbox disabled">
+                    <input type="checkbox" id="power-gen" disabled>
+                    <span class="checkmark"></span>
+                    <div class="checkbox-label">
+                        <strong>Power Generation</strong>
+                        <small>Coming Soon</small>
+                    </div>
+                </label>
+
+                <label class="module-checkbox disabled">
+                    <input type="checkbox" id="processing" disabled>
+                    <span class="checkmark"></span>
+                    <div class="checkbox-label">
+                        <strong>Processing Facility</strong>
+                        <small>Coming Soon</small>
+                    </div>
+                </label>
+
+                <label class="module-checkbox disabled">
+                    <input type="checkbox" id="storage" disabled>
+                    <span class="checkmark"></span>
+                    <div class="checkbox-label">
+                        <strong>Storage Warehouse</strong>
+                        <small>Coming Soon</small>
+                    </div>
+                </label>
+            </div>
+        </section>
+
+        <!-- Material Totals -->
+        <section class="calc-section">
+            <h2>Material Requirements</h2>
+            <div class="totals-summary">
+                <div class="total-card">
+                    <span class="total-label">Total Materials</span>
+                    <span class="total-value" id="total-materials">0</span>
+                </div>
+                <div class="total-card">
+                    <span class="total-label">Estimated Time</span>
+                    <span class="total-value" id="total-time">0 hrs</span>
+                </div>
+                <div class="total-card">
+                    <span class="total-label">Modules Selected</span>
+                    <span class="total-value" id="modules-count">0</span>
+                </div>
+            </div>
+
+            <div class="materials-breakdown" id="materials-list">
+                <!-- Materials will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Progress Tracker -->
+        <section class="calc-section">
+            <h2>Build Progress Tracker</h2>
+            <p class="section-description">Track your progress as you gather materials and complete build phases</p>
+            
+            <div class="progress-container">
+                <div class="progress-module">
+                    <h3>Central Hub Progress</h3>
+                    <div class="progress-phases" id="central-hub-progress">
+                        <label class="progress-phase">
+                            <input type="checkbox" class="phase-check" data-phase="foundation">
+                            <span>Phase 1: Foundation (Y=0-1)</span>
+                            <small>~2 hours</small>
+                        </label>
+                        <label class="progress-phase">
+                            <input type="checkbox" class="phase-check" data-phase="ground-walls">
+                            <span>Phase 2: Ground Floor Walls (Y=2-5)</span>
+                            <small>~1.5 hours</small>
+                        </label>
+                        <label class="progress-phase">
+                            <input type="checkbox" class="phase-check" data-phase="second-floor">
+                            <span>Phase 3: Second Floor (Y=6-11)</span>
+                            <small>~2.5 hours</small>
+                        </label>
+                        <label class="progress-phase">
+                            <input type="checkbox" class="phase-check" data-phase="third-floor">
+                            <span>Phase 4: Third Floor (Y=12-17)</span>
+                            <small>~2.5 hours</small>
+                        </label>
+                        <label class="progress-phase">
+                            <input type="checkbox" class="phase-check" data-phase="roof">
+                            <span>Phase 5: Roof & Details (Y=18)</span>
+                            <small>~1 hour</small>
+                        </label>
+                        <label class="progress-phase">
+                            <input type="checkbox" class="phase-check" data-phase="integration">
+                            <span>Phase 6: Integration</span>
+                            <small>~1.5 hours</small>
+                        </label>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">0% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Export Options -->
+        <section class="calc-section">
+            <h2>Export & Share</h2>
+            <div class="export-buttons">
+                <button class="export-btn" id="export-txt">
+                    <span class="btn-icon">📄</span>
+                    Export as Text
+                </button>
+                <button class="export-btn" id="export-print">
+                    <span class="btn-icon">🖨️</span>
+                    Print Material List
+                </button>
+                <button class="export-btn" id="save-progress">
+                    <span class="btn-icon">💾</span>
+                    Save Progress
+                </button>
+                <button class="export-btn" id="reset-all">
+                    <span class="btn-icon">🔄</span>
+                    Reset All
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Techmechanik | ATM10 Modular Base Guide</p>
+            <p class="footer-links">
+                <a href="https://github.com/Techmechanik/Minecraft" target="_blank">GitHub</a> | 
+                <a href="../index.html">Home</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/calculator.js"></script>
+</body>
+</html>

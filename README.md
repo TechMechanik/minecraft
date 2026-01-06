@@ -15,7 +15,7 @@ A comprehensive, responsive web guide for building modular tech bases in All The
 
 ## 🚀 Live Demo
 
-Visit the live site: [GitHub Pages URL will go here]
+Visit the live site: [[GitHub Page](https://techmechanik.github.io/minecraft/)]
 
 ## 📦 Current Modules
 
